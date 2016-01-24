@@ -64,8 +64,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
-  req.db = results_database[0];
-  console.log('req:', req.db);
+  req.db = results_database;
+  // console.log('req:', req.db);
   next();
 });
 
