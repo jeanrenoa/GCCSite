@@ -10,32 +10,53 @@
   <body>
   <div class="container-fluid">
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <!-- <p>content is <%= content %></p> -->
-
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Login Count</th>
-          <th>Total Forum Post</th>
-          <th>Nautilus Beta2 64bit Downloads</th>
-          <th>Nautilus Beta2 32bit Downloads</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% for(var i=0; i<content.length; i++) { %>
+    <div class="row" style="vertical-alignment:middle">
+      <section class="col-sm-6">
+        <p>Welcome to <%= title %></p>
+        <!-- <p>content is <%= content %></p> -->
+      </section>
+      <section class="col-sm-6">
+        <form class="" action="index.html" method="post">
+          <div class="form-group container-fuild">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search date">
+              <span class="input-group-btn">
+                <button  class="btn btn-default" type="button">Search</button>
+              </span>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div> <!-- row of title -->
+    <div class="row container-fluid">
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td><%= content[i].date %></td>
-            <td><%= content[i].total_Project_Login %></td>
-            <td><%= content[i].total_Forum_Posts %></td>
-            <td><%= content[i].total_download_Nautilus_Beta2_x64 %></td>
-            <td><%= content[i].total_download_Nautilus_Beta2_x86 %></td>
+            <th>Date</th>
+            <th>Login Count</th>
+            <th>Total Forum Post</th>
+            <th>Nautilus RC Beta 64bit Downloads</th>
+            <th>Nautilus RC Beta 32bit Downloads</th>
+            <th>Nautilus Beta2 64bit Downloads</th>
+            <th>Nautilus Beta2 32bit Downloads</th>
           </tr>
-        <% } %>
-      </tbody>
-    </table>
-  </div>
+        </thead>
+        <tbody>
+          <% for(var i=0; i<content.length; i++) { %>
+            <tr>
+              <td><%= content[i].date %></td>
+              <td><%= content[i].total_Project_Login %></td>
+              <td><%= content[i].total_Forum_Posts %></td>
+              <td><%= content[i].total_download_Nautilus_RC_Beta_x64 %></td>
+              <td><%= content[i].total_download_Nautilus_RC_Beta_x86 %></td>
+              <td><%= content[i].total_download_Nautilus_Beta2_x64 %></td>
+              <td><%= content[i].total_download_Nautilus_Beta2_x86 %></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div> <!-- row of content -->
+  </div> <!-- content container -->
 
     <script src="/javascripts/jquery-2.2.0.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>

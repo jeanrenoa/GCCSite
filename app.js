@@ -28,6 +28,8 @@ var projectSchema = new Schema({
   total_download_Nautilus_Beta1_x86: Number,
   total_download_Nautilus_Beta2_x64: Number,
   total_download_Nautilus_Beta2_x86: Number,
+  total_download_Nautilus_RC_Beta_x64: Number,
+  total_download_Nautilus_RC_Beta_x86: Number,
   date: String,
   baseline: Boolean,
   Week: Number
